@@ -10,8 +10,7 @@ class JapaneseRestaurantApp extends GetView<ThemeController> {
 
   @override
   Widget build(BuildContext context) => GetMaterialApp(
-        theme:
-            controller.restaurantTheme(),
+     //theme: controller.restaurantTheme(),
         debugShowCheckedModeBanner: false,
         title: 'japanese-resturant',
         initialRoute: RoutePath.homeScreen,

@@ -1,43 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'utils/dark_theme_color.dart';
+
 class ThemeController extends GetxController {
-  RxBool isDarkTheme = false.obs;
+  RxBool isDarkTheme = true.obs;
 
-  RxString themeChangeTextTitle = 'change to dark'.obs;
-
-  ThemeData restaurantTheme() =>
-      isDarkTheme.value ? ThemeData.dark() : ThemeData.light();
+  ThemeData get restaurantTheme => isDarkTheme.value ? dark : light;
 
   void changeTheme() {
     isDarkTheme.value = !isDarkTheme.value;
-
-    if (isDarkTheme.value) {
-      themeChangeTextTitle.value = 'change to light';
-    } else {
-      themeChangeTextTitle.value = 'change to dark';
-    }
-    Get.changeTheme(isDarkTheme.value
-        ? dark(
-            primaryColor: Colors.red,
-            textTheme: const TextTheme(titleLarge: TextStyle()),
-          )
-        : light(
-            primaryColor: const Color(0xfffd8629),
-            textTheme: const TextTheme()));
+    Get.changeTheme(isDarkTheme.value ? dark : light);
   }
 
-  ThemeData dark({
-    required Color primaryColor,
-    required TextTheme textTheme,
-  }) =>
-      ThemeData(
-          primaryColor: primaryColor,
-          textTheme: textTheme,
-          useMaterial3: true,
-          scaffoldBackgroundColor: const Color(0xff18172B));
+  ThemeData dark = ThemeData(
+    cardColor: DarkThemeColor.itemColor,
+    primaryColor: DarkThemeColor.primaryColor,
+    scaffoldBackgroundColor: DarkThemeColor.backgroundColor,
+    textTheme: const TextTheme(
+        titleLarge: TextStyle(
+      color: DarkThemeColor.secondaryPrimaryColor,
+    )),
+    useMaterial3: true,
+  );
 
-  ThemeData light({required Color primaryColor, required TextTheme textTheme}) {
-    return ThemeData(primaryColor: primaryColor, textTheme: textTheme);
-  }
+  ThemeData light = ThemeData(
+    primaryColor: Colors.black,
+    textTheme: const TextTheme(),
+  );
 }
