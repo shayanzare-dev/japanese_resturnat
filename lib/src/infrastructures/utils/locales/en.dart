@@ -1,0 +1,26 @@
+const Map<String, String> enData = {
+  "title": "japanese-restaurant",
+  "location": "location",
+  "goodMorning": "Good Morning!",
+  "whatDoYouWantToEat": "what do you want to eat\ntoday?",
+  "searchFood": "Search Food..",
+  "availableForYou": "Available For You",
+  "bestFoodOfTheWeek": "Best food of The week",
+  "seeAll": "See all",
+  "all": "All",
+  "sushi": "Sushi",
+  "kebab": "Kebab",
+  "tempura": "Tempura",
+  "ramen": "Ramen",
+  "burger": "Burger",
+  "descriptionTitle": "Description",
+  "ingredients": "Ingredients",
+  "addToCart": "Add to cart",
+  "description":
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "myCart": "My cart",
+  "subTotal": "Subtotal",
+  "taxes": "Taxes",
+  "total": "total",
+  "checkout": "Checkout"
+};
